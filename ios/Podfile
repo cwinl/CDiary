@@ -36,12 +36,3 @@ target 'CDiary' do
   use_native_modules!
 end
 
-target 'CDiary-tvOS' do
-  # Pods for CDiary-tvOS
-
-  target 'CDiary-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
