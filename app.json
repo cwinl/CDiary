@@ -1,4 +1,6 @@
 {
   "name": "CDiary",
-  "displayName": "CDiary"
+  "displayName": "三友日记本",
+  "version":"0.0.1",
+  "build": "1"
 }
