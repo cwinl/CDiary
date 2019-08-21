@@ -15,9 +15,11 @@ import {
 } from 'react-native';
 
 import { Provider } from 'react-redux';
-import configureStore from '../store/configureStore.js';
+import configureStore from '../store/configureStore';
 const store = configureStore();
-import Storages from '../src/global/globalStorage.js';
+import globalStorages from '../src/global/globalStorage';
+
+
 
 import {
   Header,
@@ -28,20 +30,18 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 export default class App extends Component {
-
-  UNSAFE_componentWillMount() {
-
-  }
   componentDidMount() {
+
+    console.log(store.getState());
+
+
 
   }
 
   render() {
     return (
-      
       <Provider store={store}><Text >Debug</Text></Provider>
     );
   }
-
 };
 

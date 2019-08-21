@@ -1,14 +1,12 @@
 'use strict';
 
 import { createStore, applyMiddleware } from 'redux';
-
 import thunkMiddleware from 'redux-thunk';
-
-import Reducer from '../reducers/reducer.js';
-
+import Reducer from '../reducer';
 import {
     createReactNavigationReduxMiddleware,
 } from 'react-navigation-redux-helpers';
+
 const navMiddleware = createReactNavigationReduxMiddleware(
     "root",
     state => state.nav,

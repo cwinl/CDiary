@@ -1,13 +1,13 @@
-import React, {AsyncStorage,DeviceStorage}from 'react-native';
+import React, { AsyncStorage, DeviceStorage } from 'react-native';
 
-class Storages{
+class globalStorages {
     /**
      * 获取
      * @param key
      * @returns {Promise<T>|*|Promise.<TResult>}
      */
 
-      static getItem(key) {
+    static getItem(key) {
         return AsyncStorage.getItem(key).then((value) => {
             const jsonValue = JSON.parse(value);
             return jsonValue;
@@ -50,4 +50,4 @@ class Storages{
     }
 }
 
-export default Storages;
+export default globalStorages;

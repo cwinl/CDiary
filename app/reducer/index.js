@@ -5,7 +5,7 @@
  */
 'use strict';
 import { combineReducers } from 'redux';
-import login from './login/login.js';
+import login from './login';
 
 const rootReducer = combineReducers({
 	// 将所有的redux处理逻辑包装在一起
