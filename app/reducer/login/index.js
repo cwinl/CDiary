@@ -29,7 +29,6 @@ export default function login(state = initialState, action) {
         status: '登录成功',
         isLoading: false,
         data: action.data,
-
       }
       break;
     case Constants.LOGIN_FAILED:
