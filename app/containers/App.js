@@ -11,6 +11,7 @@ import {
 	ScrollView,
 	View,
 	Text,
+	TextInput,
 	StatusBar,
 } from 'react-native';
 
@@ -35,15 +36,19 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-
+			zip: ""
 		}
 		console.log('constructor');
 	}
-
+	
 	render() {
-		console.log('render');
 		return (
-			<Provider store={store}><Text >Debug</Text></Provider>
+			<Provider store={store}>
+				<View style={styles.container}>
+					<TextInput style={styles.input} onSubmitEditing={this._handleTextCHange} />
+					<Text style={styles.welcome}>your zip: {this.state.zip}</Text>
+				</View>
+			</Provider>
 		);
 	}
 
@@ -69,7 +74,27 @@ class App extends Component {
 	componentWillUnmount() {
 		console.log('componentWillUnmount');
 	}
+
+	_handleTextCHange = event => {
+		this.setState({ zip: event.nativeEvent.text })
+	}
 };
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1
+	},
+	welcome: {
+		fontSize: 20,
+		textAlign: 'center',
+		margin: 20
+	},
+	input: {
+		fontSize: 20,
+		borderWidth: 2,
+		height: 40
+	}
+})
 
 App.defaultProps = {};
 App.propTypes = {};
