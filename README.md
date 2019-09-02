@@ -1,6 +1,6 @@
 My first app build by RN used for React-native learning propose
 
-Usage:
+Usage:  
 0. 
 git clone https://github.com/cwinl/CDiary.git
 cd  CDiary
